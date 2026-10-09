@@ -1,145 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+bottom: 10%;
+            left: 12%;
 
-    <title>Omidmasomi1 — Developer</title>
-
-    <meta name="description"
-          content="Independent software projects by Omidmasomi1.">
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #f4f7fb;
-            min-height: 100vh;
-            overflow-x: hidden;
-
-            background:
-                radial-gradient(circle at 10% 10%,
-                    rgba(0, 255, 170, 0.14),
-                    transparent 28%),
-
-                radial-gradient(circle at 90% 20%,
-                    rgba(130, 80, 255, 0.18),
-                    transparent 30%),
-
-                radial-gradient(circle at 50% 100%,
-                    rgba(0, 170, 255, 0.12),
-                    transparent 35%),
-
-                #080b12;
-        }
-
-
-        /* =========================
-           FLOATING STICKERS
-        ========================= */
-
-        .sticker {
-            position: fixed;
-            z-index: 1;
-            font-size: 30px;
-            opacity: 0.18;
-            pointer-events: none;
-            user-select: none;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .s1 {
-            top: 12%;
-            left: 7%;
-        }
-
-        .s2 {
-            top: 27%;
-            right: 7%;
-            animation-delay: 1s;
-        }
-
-        .s3 {
-            bottom: 23%;
-            left: 8%;
-            animation-delay: 2s;
-        }
-
-        .s4 {
-            bottom: 10%;
-            right: 9%;
-            animation-delay: 3s;
-        }
-
-        .s5 {
-            top: 55%;
-            left: 4%;
             animation-delay: 1.5s;
         }
 
-        .s6 {
-            top: 70%;
-            right: 4%;
+        .sticker-six {
+            bottom: 15%;
+            right: 13%;
+
             animation-delay: 2.5s;
         }
 
-        @keyframes float {
+        @keyframes floating {
 
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
             }
 
             50% {
-                transform: translateY(-14px) rotate(6deg);
+                transform:
+                    translateY(-15px)
+                    rotate(6deg);
+            }
+
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
             }
 
         }
 
 
-        /* =========================
-           MAIN
-        ========================= */
+        /* ==============================
+           MAIN CONTAINER
+        ============================== */
 
         .container {
-            width: 92%;
-            max-width: 760px;
-            margin: auto;
-            padding: 60px 0 45px;
             position: relative;
+
             z-index: 2;
+
+            width: 90%;
+
+            max-width: 760px;
+
+            margin: 0 auto;
+
+            padding:
+                60px
+                0
+                45px;
         }
 
 
-        /* =========================
+        /* ==============================
            HEADER
-        ========================= */
+        ============================== */
 
         header {
             text-align: center;
+
             margin-bottom: 45px;
         }
 
         .avatar {
-            width: 86px;
-            height: 86px;
-            margin: 0 auto 20px;
+            width: 88px;
+            height: 88px;
+
+            margin:
+                0 auto
+                20px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border-radius: 50%;
 
-            font-size: 40px;
+            font-size: 42px;
 
             background:
                 linear-gradient(
@@ -149,125 +92,291 @@
                 );
 
             box-shadow:
-                0 0 35px rgba(0, 229, 160, 0.22),
-                0 0 55px rgba(105, 92, 255, 0.18);
+                0 0 30px
+                rgba(0, 229, 160, 0.22),
+
+                0 0 60px
+                rgba(105, 92, 255, 0.16);
         }
 
         header h1 {
             margin: 0;
+
             font-size: 42px;
+
             letter-spacing: -1px;
         }
 
         header p {
-            margin: 10px 0 0;
-            color: #9ca7b5;
+            margin:
+                8px
+                0
+                0;
+
+            color: #8b949e;
+
             font-size: 17px;
         }
 
         .tagline {
-            margin-top: 14px;
-            color: #d9dee7;
+            margin-top: 13px;
+
+            color: #c7ced8;
+
             font-size: 14px;
         }
 
 
-        /* =========================
-           CARD
-        ========================= */
+        /* ==============================
+           GENERAL CARD
+        ============================== */
 
         .card {
-            background: rgba(18, 23, 34, 0.82);
+            background:
+                rgba(22, 27, 34, 0.82);
 
-            border: 1px solid rgba(255,255,255,0.08);
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.08);
 
-            border-radius: 20px;
+            border-radius: 18px;
 
-            padding: 28px;
+            padding: 27px;
 
             box-shadow:
-                0 20px 60px rgba(0,0,0,0.30);
+                0 20px 60px
+                rgba(0, 0, 0, 0.30);
 
             backdrop-filter: blur(12px);
         }
 
 
-        /* =========================
+        /* ==============================
            PROJECT
-        ========================= */
-        /* =========================
-           BUTTONS
-        ========================= */
-        /* =========================
-           SUPPORT
-        ========================= */
+        ============================== */
 
-        .support {
+        .project-header {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 16px;
+        }
+
+        .project-icon {
+            width: 56px;
+            height: 56px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 15px;
+
+            font-size: 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 229, 160, 0.16),
+                    rgba(105, 92, 255, 0.18)
+                );
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.08);
+        }
+
+        .project-header h2 {
+            margin: 0;
+
+            font-size: 23px;
+        }
+
+        .project-status {
+            display: block;
+
+            margin-top: 3px;
+
+            color: #00e5a0;
+
+            font-size: 12px;
+        }
+
+        .description {
+            margin:
+                0
+                0
+                22px;
+
+            color: #8b949e;
+
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           BUTTONS
+        ============================== */
+
+        .buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding:
+                11px
+                18px;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .button:hover {
+            transform:
+                translateY(-2px);
+        }
+
+        .button-primary {
+            color: #06120e;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00b97d,
+                    #00e5a0
+                );
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 229, 160, 0.14);
+        }
+
+        .button-secondary {
+            color: #e6edf3;
+
+            background: #21262d;
+
+            border:
+                1px solid
+                #30363d;
+        }
+
+
+        /* ==============================
+           SUPPORT SECTION
+        ============================== */
+
+        .support-section {
             margin-top: 28px;
         }
 
         .support-title {
             text-align: center;
+
             margin-bottom: 8px;
         }
 
-        .coffee {
-            font-size: 38px;
-            display: block;
+        .coffee-icon {
+            font-size: 40px;
+
             margin-bottom: 5px;
         }
 
         .support-title h2 {
             margin: 0;
+
             font-size: 27px;
         }
 
         .support-text {
+            max-width: 550px;
+
+            margin:
+                10px
+                auto
+                28px;
+
             text-align: center;
-            color: #9ca7b5;
 
-            margin: 10px auto 27px;
+            color: #8b949e;
 
-            max-width: 540px;
-
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
 
-        /* =========================
-           DONATION
-        ========================= */
+        /* ==============================
+           DONATION ITEM
+        ============================== */
 
         .donation-item {
-            position: relative;
+            margin:
+                15px
+                0;
 
-            margin: 14px 0;
-            padding: 20px;
+            padding: 19px;
 
-            border-radius: 15px;
+            background:
+                rgba(8, 11, 18, 0.82);
 
-            background: rgba(8,11,18,0.78);
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.07);
 
-            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 13px;
 
-            transition: 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease;
         }
 
         .donation-item:hover {
-            border-color: rgba(255,255,255,0.16);
-            transform: translateY(-1px);
+            transform:
+                translateY(-1px);
+
+            border-color:
+                rgba(255, 255, 255, 0.15);
         }
 
         .payment-title {
             display: flex;
+
             align-items: center;
 
             gap: 10px;
 
-            margin-bottom: 12px;
+            margin-bottom: 11px;
+
+            font-size: 16px;
 
             font-weight: bold;
-            font-size: 16px;
         }
 
         .payment-icon {
@@ -275,45 +384,567 @@
         }
 
         .owner {
-            color: #8e99a8;
-            font-size: 13px;
             margin-bottom: 9px;
+
+            color: #8b949e;
+
+            font-size: 13px;
         }
 
         .address {
+            padding:
+                12px;
+
             color: #cbd2dc;
 
             background: #111722;
 
-            padding: 12px;
+            border:
+                1px solid
+                #242c39;
 
             border-radius: 9px;
 
             word-break: break-all;
 
-            font-family: Consolas, monospace;
+            font-family:
+                Consolas,
+                "Courier New",
+                monospace;
 
             font-size: 13px;
 
-            border: 1px solid #242c39;
+            line-height: 1.6;
         }
 
 
-        /* =========================
+        /* ==============================
            COPY BUTTON
-        ========================= */
+        ============================== */
 
         .copy-button {
             margin-top: 11px;
 
-            border: 1px solid #303948;
-
-            background: #1a202b;
+            padding:
+                8px
+                14px;
 
             color: #dce2ea;
 
-            padding: 8px 14px;
+            background: #21262d;
+
+            border:
+                1px solid
+                #30363d;
 
             border-radius: 8px;
 
-            cursor
+            cursor: pointer;
+
+            font-size: 13px;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .copy-button:hover {
+            background: #30363d;
+
+            border-color: #485467;
+        }
+
+
+        /* ==============================
+           THANK YOU MESSAGE
+        ============================== */
+
+        .thanks {
+            margin-top: 25px;
+
+            padding: 16px;
+
+            text-align: center;
+
+            color: #aeb8c5;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 229, 160, 0.06),
+                    rgba(105, 92, 255, 0.07)
+                );
+
+            border-radius: 12px;
+
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            margin-top: 45px;
+
+            text-align: center;
+
+            color: #626d7c;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 90%;
+
+                padding:
+                    42px
+                    0
+                    35px;
+            }
+
+            header {
+                margin-bottom: 35px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            .avatar {
+                width: 76px;
+                height: 76px;
+
+                font-size: 35px;
+            }
+
+            .card {
+                padding: 21px;
+
+                border-radius: 16px;
+            }
+
+            .project-header {
+                align-items: flex-start;
+            }
+
+            .project-header h2 {
+                font-size: 21px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .address {
+                font-size: 12px;
+            }
+
+            .sticker {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         BACKGROUND
+    ============================== -->
+
+    <div class="background-glow glow-one"></div>
+
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- ==============================
+         FLOATING STICKERS
+    ============================== -->
+
+    <div class="sticker sticker-one">💻</div>
+
+    <div class="sticker sticker-two">🚀</div>
+
+    <div class="sticker sticker-three">⚡</div>
+
+    <div class="sticker sticker-four">🛠️</div>
+
+    <div class="sticker sticker-five">☕</div>
+
+    <div class="sticker sticker-six">💎</div>
+
+
+
+    <main class="container">
+
+
+        <!-- ==============================
+             HEADER
+        ============================== -->
+
+        <header>
+
+            <div class="avatar">
+                👨‍💻
+            </div>
+
+            <h1>
+                Omidmasomi1
+            </h1>
+
+            <p>
+                Independent Software Developer
+            </p>
+
+            <div class="tagline">
+                Building simple tools that make everyday tasks easier.
+            </div>
+
+        </header>
+
+
+
+        <!-- ==============================
+             PROJECT SECTION
+        ============================== -->
+
+        <section>
+
+            <div class="card">
+
+
+                <div class="project-header">
+
+                    <div class="project-icon">
+                        📁
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            File Organizer
+                        </h2>
+
+                        <span class="project-status">
+                            ● Lightweight Windows App
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <p class="description">
+
+                    A simple, lightweight and portable Windows
+                    application for organizing files, photos and
+                    videos quickly and easily.
+
+                </p>
+
+
+
+                <div class="buttons">
+
+                    <a
+                        class="button button-primary"
+                        href="https://github.com/Omidmasomi1/file-organizer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💻 View on GitHub
+                    </a>
+
+
+                    <a
+                        class="button button-secondary"
+                        href="https://github.com/Omidmasomi1/file-organizer/releases"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ⬇️ Download
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             SUPPORT SECTION
+        ============================== -->
+
+        <section class="support-section">
+
+            <div class="card">
+
+
+                <div class="support-title">
+
+                    <div class="coffee">
+                        ☕
+                    </div>
+
+                    <h2>
+                        Buy Me a Coffee
+                    </h2>
+
+                </div>
+
+
+
+                <p class="support-text">
+
+                    If you find my projects useful and want to
+                    support their development, you can buy me
+                    a coffee. Every little contribution helps ❤️
+
+                </p>
+
+
+
+                <!-- ==============================
+                     IRANIAN BANK CARD
+                ============================== -->
+
+                <div class="donation-item">
+
+                    <div class="payment-title">
+
+                        <span class="payment-icon">
+                            💳
+                        </span>
+
+                        <span>
+                            Iranian Rial
+                        </span>
+
+                    </div>
+
+
+                    <div class="owner">
+                        به نام: امید معصومی
+                    </div>
+
+
+                    <div class="address">
+                        6037 7016 3502 5866
+                    </div>
+
+
+                    <button
+                        class="copy-button"
+                        type="button"
+                        onclick="copyText(
+                            '6037701635025866',
+                            this
+                        )"
+                    >
+                        📋 Copy Card Number
+                    </button>
+
+                </div>
+
+
+
+                <!-- ==============================
+                     USDT TRC20
+                ============================== -->
+
+                <div class="donation-item">
+
+                    <div class="payment-title">
+
+                        <span class="payment-icon">
+                            ₮
+                        </span>
+
+                        <span>
+                            USDT — TRC20
+                        </span>
+
+                    </div>
+
+
+                    <div class="address">
+                        TSp9wjbTbW8XLqGU1FWkx7bVM9sBpWX39w
+                    </div>
+
+
+                    <button
+                        class="copy-button"
+                        type="button"
+                        onclick="copyText(
+                            'TSp9wjbTbW8XLqGU1FWkx7bVM9sBpWX39w',
+                            this
+                        )"
+                    >
+                        📋 Copy Address
+                    </button>
+
+                </div>
+
+
+
+                <!-- ==============================
+                     TON
+                ============================== -->
+
+                <div class="donation-item">
+
+                    <div class="payment-title">
+
+                        <span class="payment-icon">
+                            💎
+                        </span>
+
+                        <span>
+                            TON
+                        </span>
+
+                    </div>
+
+
+                    <div class="address">
+                        UQDSoq_mvGd8SqYBQbtrJHMhbz9Nek8TPFlYrYrm6No3zZlf
+                    </div>
+
+
+                    <button
+                        class="copy-button"
+                        type="button"
+                        onclick="copyText(
+                            'UQDSoq_mvGd8SqYBQbtrJHMhbz9Nek8TPFlYrYrm6No3zZlf',
+                            this
+                        )"
+                    >
+                        📋 Copy Address
+                    </button>
+
+                </div>
+
+
+
+                <!-- ==============================
+                     THANK YOU
+                ============================== -->
+
+                <div class="thanks">
+
+                    ❤️ Thank you for supporting
+                    independent software development.
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             FOOTER
+        ============================== -->
+
+        <footer>
+
+            Built with curiosity, coffee & code ☕💻
+
+            <br>
+
+            © 2026 Omidmasomi1
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- ==============================
+         COPY SCRIPT
+    ============================== -->
+
+    <script>
+
+        function copyText(text, button) {
+
+            if (
+                navigator.clipboard &&
+                window.isSecureContext
+            ) {
+
+                navigator.clipboard.writeText(text);
+
+            } else {
+
+                const textarea =
+                    document.createElement("textarea");
+
+                textarea.value = text;
+
+                textarea.style.position = "fixed";
+
+                textarea.style.opacity = "0";
+
+                document.body.appendChild(textarea);
+
+                textarea.focus();
+
+                textarea.select();
+
+                document.execCommand("copy");
+
+                document.body.removeChild(textarea);
+
+            }
+
+
+            const originalText =
+                button.innerText;
+
+
+            button.innerText =
+                "✓ Copied!";
+
+
+            setTimeout(function() {
+
+                button.innerText =
+                    originalText;
+
+            }, 1500);
+
+        }
+
+    </script>
+
+
+</body>
+</html>
